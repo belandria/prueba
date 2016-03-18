@@ -26,7 +26,8 @@ Route::get('/', function () {
 |
 */
 Route::get('controlador','PruebaController@index');
-
+Route::get('name/{nombre}','PruebaController@nombre');
+Route::get("direccion", "PruebaController@index");
 
 Route::group(['middleware' => ['web']], function () {
     //
@@ -43,4 +44,9 @@ Route::get('edad/{edad}', function($edad){
 });
 Route::get('edad2/{edad?}', function($edad = 20){
     return "eres marico si o no?: ".$edad;
+});
+Route::get("direccion", function() {
+
+    return View("vista");
+
 });
