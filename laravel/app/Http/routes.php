@@ -32,7 +32,7 @@ Route::group(['middleware' => ['web']], function () {
     //
 });
 Route::get('prueba', function(){
-    return "yo si te cojo";
+    return "oK";
 });
 
 Route::get('nombre/{nombre}', function($nombre){
