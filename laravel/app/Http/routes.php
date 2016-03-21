@@ -28,7 +28,9 @@ Route::get('/', function () {
 Route::get('controlador','PruebaController@index');
 Route::get('name/{nombre}','PruebaController@nombre');
 Route::get("direccion", "PruebaController@index");
-
+Route::get("1", "PruebaController@vista1");
+Route::get("2", "PruebaController@vista2");
+Route::resource('movie','MovieController');
 Route::group(['middleware' => ['web']], function () {
     //
 });
